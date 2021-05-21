@@ -84,20 +84,12 @@ div#heroanswer {
   align-items: center;
 }
 
-
 button.btn.btn-link {
   width: 323px;
   color: #fff;
   font-size: 1.6rem;
   font-family: 'Khand', sans-serif;
 }
-
-
-
-
-
-
-
 
 
 
@@ -122,11 +114,14 @@ button.btn.btn-link {
     width: 80%;
   }
 
-
-
+  .riddlesection {
+    margin: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 }
-
 
 @media screen and (min-width: 501px) and (max-width: 681px) {
   .jumbo {
@@ -141,12 +136,9 @@ button.btn.btn-link {
   button.herobutton.btn.btn-primary {
     width: 80%;
   }
-
-
 }
 
 @media screen and (min-width: 682px) and (max-width: 1217px) {
-
   .jumbo {
     height: 482px;
     width: 84%;
@@ -155,7 +147,6 @@ button.btn.btn-link {
   .fontsfam {
     font-size: 2.7rem;
   }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
