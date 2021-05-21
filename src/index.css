@@ -160,7 +160,11 @@ button.btn.btn-link {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   button.btn.btn-link {
-    width: unset;
+    width: 100%;
     font-size: 1.1rem;
+  }
+
+  .riddlegrid {
+    display: unset;
   }
 }
