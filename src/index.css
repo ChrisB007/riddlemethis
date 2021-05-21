@@ -76,6 +76,15 @@
   background-color: #e84545;
 }
 
+div#heroanswer {
+  background-color: unset;
+  border: unset;
+  width: 243px;
+  margin: auto;
+  align-items: center;
+}
+
+
 button.btn.btn-link {
   width: 323px;
   color: #fff;
@@ -100,7 +109,7 @@ button.btn.btn-link {
 /* @Media Screen */
 @media screen and (max-width: 500px) {
   .jumbo {
-    height: 300px;
+    height: 436px;
     width: 84%;
   }
 
@@ -113,7 +122,7 @@ button.btn.btn-link {
 
 @media screen and (min-width: 501px) and (max-width: 681px) {
   .jumbo {
-    height: 300px;
+    height: 436px;
     width: 84%;
   }
 
@@ -125,7 +134,7 @@ button.btn.btn-link {
 @media screen and (min-width: 682px) and (max-width: 1217px) {
 
   .jumbo {
-    height: 390px;
+    height: 436px;
     width: 84%;
   }
 
