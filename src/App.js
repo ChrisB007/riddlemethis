@@ -1,5 +1,6 @@
 import Topbar from './components/Nav';
-import Hero from './components/Hero'
+import Hero from './components/Hero';
+import Riddles from './components/Riddles';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Topbar />
       <Hero />
+      <Riddles />
     </div>
   );
 }
