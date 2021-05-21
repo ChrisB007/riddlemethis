@@ -64,6 +64,25 @@
   align-items: center;
 }
 
+#easy {
+  background-color: #4aa96c;
+}
+
+#medium {
+  background-color: #ffb26b;
+}
+
+#hard {
+  background-color: #e84545;
+}
+
+button.btn.btn-link {
+  width: 323px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: 'Khand', sans-serif;
+}
+
 
 
 
