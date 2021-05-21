@@ -20,14 +20,33 @@
 
 .navbg {
   background-color: #fff;
-  padding: 1% 7%;
+  padding: 1% 17%;
 }
 
 .jumbo {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  height: 600px;
-  width: 84%;
+  height: 560px;
+  width: 70%;
   margin: auto;
+  background-image: linear-gradient(178.5deg, rgba(122, 231, 248, 1) 6.5%, rgba(86, 118, 191, 1) 90.9%);
+  color: #fff;
+}
+
+.to-right {
+  display: flex;
+  justify-items: right;
+}
+
+.herobutton {
+  width: 300px;
+  height: 50px;
+  background-color: beige;
+  color: #000;
+}
+
+.herobutton:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 
@@ -48,6 +67,7 @@
 @media screen and (max-width: 500px) {
   .jumbo {
     height: 300px;
+    width: 84%;
   }
 
   .fontsfam {
@@ -58,6 +78,11 @@
 
 
 @media screen and (min-width: 501px) and (max-width: 681px) {
+  .jumbo {
+    height: 300px;
+    width: 84%;
+  }
+
   .fontsfam {
     font-size: 3.9rem;
   }

@@ -15,12 +15,12 @@ const Topbar = () => {
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                        className="mr-auto my-2 my-lg-0"
+                        className="mr-auto my-2 my-lg-0 "
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                         >
-                        <Nav.Link href="#action1">Home</Nav.Link>
                         </Nav>
+                        <Nav.Link href="#action1" className="to-right">Submit a Riddle</Nav.Link>
                     </Navbar.Collapse>
                     </Navbar>
                 </Col>
