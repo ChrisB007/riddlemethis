@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Accordion, Card, Button, Container, Row, Col} from 'react-bootstrap';
 
 const Riddles = props => {
+
+    const [close, setClose] = useState("");
+
+
+    const closed = () =>{
+        setClose("Click to close");
+    }
+
     return (
         <>
         <div className="riddlesection">
@@ -11,8 +19,8 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="easy">
                     <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        Easy Riddles
+                    <Accordion.Toggle onClick={closed} value="Easy Riddles" as={Button} variant="link" eventKey="0">
+                        {close}
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -25,8 +33,8 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="medium">
                     <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        Intermediate Riddles
+                    <Accordion.Toggle onClick={closed} value="Intermediate Riddles" as={Button} variant="link" eventKey="0">
+                        {close}
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -39,8 +47,8 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="hard">
                     <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        Hard Riddles
+                    <Accordion.Toggle onClick={closed} value="Hard Riddles" as={Button} variant="link" eventKey="0">
+                        {close}
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">

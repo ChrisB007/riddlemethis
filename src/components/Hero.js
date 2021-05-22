@@ -1,7 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Container, Row, Col, Jumbotron, Accordion, Card, Button} from 'react-bootstrap';
 
 const Hero = () => {
+    const [close, setClose] = useState("Check the answer");
+
+    const closed = () => {
+        if (close === "Check the answer"){
+            setClose(
+                "Click to close"
+            )
+        } else {
+            setClose(
+                "Check the answer"
+            )
+        }
+    }
+
+
     return (
         <>
         <Container fluid>
@@ -13,8 +28,8 @@ const Hero = () => {
                         <Accordion>
                         <Card id="heroanswer">
                             <Card.Header>
-                            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                Check the answer
+                            <Accordion.Toggle onClick={closed} value="Check the answer" className="closeonclick" as={Button} variant="link" eventKey="0">
+                                {close}
                             </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">

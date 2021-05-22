@@ -20,7 +20,7 @@ const Topbar = () => {
                         navbarScroll
                         >
                         </Nav>
-                        <Nav.Link href="/" className="to-right">Submit a Riddle</Nav.Link>
+                        <Nav.Link href="/" className="to-right close">Submit a Riddle</Nav.Link>
                     </Navbar.Collapse>
                     </Navbar>
                 </Col>
