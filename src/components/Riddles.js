@@ -3,12 +3,19 @@ import { Accordion, Card, Button, Container, Row, Col} from 'react-bootstrap';
 
 const Riddles = props => {
 
-    const [close, setClose] = useState("");
-
-
-    const closed = () =>{
-        setClose("Click to close");
-    }
+    const [close, setClose] = useState({
+        easy: "Easy Riddles",
+        medium: "Intermediate Riddle",
+        hard: "Hard Riddles"
+      });
+       
+      const closed = (e) => {
+        const id = e.target.id;
+        setClose({
+          ...close, 
+          [id]: "Click to close"
+        });
+      };
 
     return (
         <>
@@ -19,8 +26,8 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="easy">
                     <Card.Header>
-                    <Accordion.Toggle onClick={closed} value="Easy Riddles" as={Button} variant="link" eventKey="0">
-                        {close}
+                    <Accordion.Toggle id="easy" onClick={closed} value="Easy Riddles" as={Button} variant="link" eventKey="0">
+                        {close.easy}
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -33,8 +40,8 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="medium">
                     <Card.Header>
-                    <Accordion.Toggle onClick={closed} value="Intermediate Riddles" as={Button} variant="link" eventKey="0">
-                        {close}
+                    <Accordion.Toggle id="medium" onClick={closed} value="Intermediate Riddles" as={Button} variant="link" eventKey="0">
+                    {close.medium}
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
@@ -47,8 +54,8 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="hard">
                     <Card.Header>
-                    <Accordion.Toggle onClick={closed} value="Hard Riddles" as={Button} variant="link" eventKey="0">
-                        {close}
+                    <Accordion.Toggle id="hard" onClick={closed} value="Hard Riddles" as={Button} variant="link" eventKey="0">
+                    {close.hard}
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
