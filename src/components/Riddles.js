@@ -8,13 +8,24 @@ const Riddles = props => {
         medium: "Intermediate Riddles",
         hard: "Hard Riddles"
       });
+
+
+       //Countdown (function)
+
+
+      //Reset Riddle (function)
        
-      const closed = (e) => {
+
+      //Handle click
+      const handleClick = (e) => {
         const id = e.target.id;
-        setClose({
-          ...close, 
-          [id]: "Click to close"
-        });
+
+        if(id){
+            setClose({
+                ...close, 
+                [id]: "Click to close",
+              })
+        }
       };
 
     return (
@@ -26,7 +37,7 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="easy">
                     <Card.Header>
-                    <Accordion.Toggle id="easy" onClick={closed} value="Easy Riddles" as={Button} variant="link" eventKey="0">
+                    <Accordion.Toggle id="easy" onClick={handleClick} value="Easy Riddles" as={Button} variant="link" eventKey="0">
                         {close.easy}
                     </Accordion.Toggle>
                     </Card.Header>
@@ -34,7 +45,7 @@ const Riddles = props => {
                     <Card.Body>
                         <Row>
                             <Col xs={6} sm={6} md={6}>Countdown</Col>
-                            <Col xs={6} sm={6} md={6}>Reset</Col>
+                            <Col className="resetlink" xs={6} sm={6} md={6}>Switch</Col>
                         </Row>
                         <div>
                         Hello! I'm the body
@@ -48,7 +59,7 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="medium">
                     <Card.Header>
-                    <Accordion.Toggle id="medium" onClick={closed} value="Intermediate Riddles" as={Button} variant="link" eventKey="0">
+                    <Accordion.Toggle id="medium" onClick={handleClick} value="Intermediate Riddles" as={Button} variant="link" eventKey="0">
                     {close.medium}
                     </Accordion.Toggle>
                     </Card.Header>
@@ -56,7 +67,7 @@ const Riddles = props => {
                     <Card.Body>
                         <Row>
                             <Col xs={6} sm={6} md={6}>Countdown</Col>
-                            <Col xs={6} sm={6} md={6}>Reset</Col>
+                            <Col className="resetlink" xs={6} sm={6} md={6}>Switch</Col>
                         </Row>
                         <div>
                         Hello! I'm the body
@@ -70,7 +81,7 @@ const Riddles = props => {
                 <Accordion>
                 <Card id="hard">
                     <Card.Header>
-                    <Accordion.Toggle id="hard" onClick={closed} value="Hard Riddles" as={Button} variant="link" eventKey="0">
+                    <Accordion.Toggle id="hard" onClick={handleClick} value="Hard Riddles" as={Button} variant="link" eventKey="0">
                     {close.hard}
                     </Accordion.Toggle>
                     </Card.Header>
@@ -78,7 +89,7 @@ const Riddles = props => {
                     <Card.Body>
                         <Row>
                             <Col xs={6} sm={6} md={6}>Countdown</Col>
-                            <Col xs={6} sm={6} md={6}>Reset</Col>
+                            <Col className="resetlink" xs={6} sm={6} md={6}>Switch</Col>
                         </Row>
                         <div>
                         Hello! I'm the body

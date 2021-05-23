@@ -19,6 +19,13 @@ body {
   overflow-x: hidden;
 }
 
+.resetlink {
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .container-fluid {
   padding: unset;
 }
