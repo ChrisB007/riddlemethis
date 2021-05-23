@@ -31,7 +31,15 @@ const Riddles = props => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I'm the body</Card.Body>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6} sm={6} md={6}>Countdown</Col>
+                            <Col xs={6} sm={6} md={6}>Reset</Col>
+                        </Row>
+                        <div>
+                        Hello! I'm the body
+                        </div>
+                    </Card.Body>
                     </Accordion.Collapse>
                 </Card>
                 </Accordion> 
@@ -45,7 +53,15 @@ const Riddles = props => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I'm the bodyHello! I'm the bodyHello! I'm the bodyHello! I'm the bodyHello! I'm the body</Card.Body>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6} sm={6} md={6}>Countdown</Col>
+                            <Col xs={6} sm={6} md={6}>Reset</Col>
+                        </Row>
+                        <div>
+                        Hello! I'm the body
+                        </div>
+                    </Card.Body>
                     </Accordion.Collapse>
                 </Card>
                 </Accordion> 
@@ -59,7 +75,15 @@ const Riddles = props => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I'm the body</Card.Body>
+                    <Card.Body>
+                        <Row>
+                            <Col xs={6} sm={6} md={6}>Countdown</Col>
+                            <Col xs={6} sm={6} md={6}>Reset</Col>
+                        </Row>
+                        <div>
+                        Hello! I'm the body
+                        </div>
+                    </Card.Body>
                     </Accordion.Collapse>
                 </Card>
                 </Accordion> 
