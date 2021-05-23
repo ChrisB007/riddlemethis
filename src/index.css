@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.card-body {
+  font-size: 1.4em;
+}
+
 
 body {
   overflow: hidden;

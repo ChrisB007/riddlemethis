@@ -5,7 +5,7 @@ const Riddles = props => {
 
     const [close, setClose] = useState({
         easy: "Easy Riddles",
-        medium: "Intermediate Riddle",
+        medium: "Intermediate Riddles",
         hard: "Hard Riddles"
       });
        
