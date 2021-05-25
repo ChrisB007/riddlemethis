@@ -49,6 +49,26 @@ body {
   color: #fff;
 }
 
+.close-button {
+  width: 77px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5F6367;
+  border: unset;
+}
+
+.close-button:hover {
+  background-color: #fff;
+  color: #5F6367;
+}
+
+.close-button-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .to-right {
   display: flex;
   justify-items: right;
