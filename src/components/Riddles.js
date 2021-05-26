@@ -27,6 +27,11 @@ const Riddles = props => {
 
       //Handle click
       const handleClick = (e) => {
+          setClose({
+              easy:true,
+              medium: true,
+              hard: true
+          })
             
         // setClose(prevCloseState => {
         //    ...prevCloseState,
@@ -70,8 +75,8 @@ const Riddles = props => {
                     <Accordion>
                     <Card id="medium">
                         <Card.Header>
-                        <Accordion.Toggle id="medium" value="Intermediate Riddles" as={Button} variant="link" eventKey="1">
-                        {levelStatus.medium }
+                        <Accordion.Toggle id="medium" onClick={handleClick} as={Button} variant="link" eventKey="1">
+                        {close.medium ? collapseButton : levelStatus.medium }
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="1">
@@ -97,8 +102,8 @@ const Riddles = props => {
                     <Accordion>
                     <Card id="hard">
                         <Card.Header>
-                        <Accordion.Toggle id="hard" onClick={handleClick} value="Hard Riddles" as={Button} variant="link" eventKey="2">
-                            {levelStatus.hard }
+                        <Accordion.Toggle id="hard" onClick={handleClick} as={Button} variant="link" eventKey="2">
+                        {close.hard ? collapseButton : levelStatus.hard }
                         </Accordion.Toggle>
                         </Card.Header>
                         <Accordion.Collapse eventKey="2">
