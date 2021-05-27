@@ -6,6 +6,15 @@ const Intermediate = () => {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [riddlecount, setRiddlecount] = useState(30)
+
+
+
+    function countdown(){
+        
+
+    }
+    
   
     return (
       <>
@@ -25,7 +34,7 @@ const Intermediate = () => {
           <Modal.Body>
           <Container>
             <Row>
-                <Col xs={6} sm={6} md={6} className="riddle-countdown">:Countdown</Col>
+                <Col xs={6} sm={6} md={6} className="riddle-countdown">:{riddlecount}</Col>
             </Row>
           </Container>
             I will not close if you click outside me. Don't even try to press
