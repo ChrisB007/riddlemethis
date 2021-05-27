@@ -26,6 +26,12 @@ body {
   align-items: center;
 }
 
+#easy,
+#medium,
+#hard {
+  margin-bottom: 10px;
+}
+
 .container-fluid {
   padding: unset;
 }
@@ -88,6 +94,15 @@ body {
 
 .lead {
   text-align: center;
+}
+
+.riddlebuttons {
+  height: 77px;
+  border: none;
+  margin-bottom: 10px;
+  width: 93%;
+  font-family: 'Khand', sans-serif;
+  font-size: 2rem;
 }
 
 .riddlesection {
