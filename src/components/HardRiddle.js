@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Button, Modal} from 'react-bootstrap';
+import { Row, Col, Container, Button, Modal} from 'react-bootstrap';
 
 const HardRiddle = () => {
     const [show, setShow] = useState(false);
@@ -23,6 +23,11 @@ const HardRiddle = () => {
             <Modal.Title>Hard Riddles</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+          <Container>
+            <Row>
+                <Col xs={6} sm={6} md={6} className="riddle-countdown">:Countdown</Col>
+            </Row>
+          </Container>
             I will not close if you click outside me. Don't even try to press
             escape key.
           </Modal.Body>
