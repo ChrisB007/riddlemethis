@@ -92,6 +92,20 @@ body {
   color: #fff;
 }
 
+.answerbuttoon.col-md-12.col-sm-12.col-12 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.answerbutton.btn.btn-primary {
+  border: 1px solid #374045;
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+
 .lead {
   text-align: center;
 }
