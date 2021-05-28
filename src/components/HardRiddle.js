@@ -31,7 +31,7 @@ const HardRiddle = () => {
   
     return (
       <>
-        <Button className="riddlebuttons" id="hard" onClick={handleShow}>
+        <Button className="riddlebuttons" id="hard" onClick={countdown}>
           Hard Riddles
         </Button>
   

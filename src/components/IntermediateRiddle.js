@@ -29,7 +29,7 @@ const Intermediate = () => {
   
     return (
       <>
-        <Button className="riddlebuttons" id="medium" onClick={handleShow}>
+        <Button className="riddlebuttons" id="medium" onClick={countdown}>
           Intermediate Riddles
         </Button>
   
