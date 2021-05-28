@@ -56,7 +56,7 @@ const Intermediate = () => {
               </Row>
               <Row>
               <Col xs={12} sm={12} md={12} className="answerbuttoon">
-                    <Button className="answerbutton">Get Answer</Button>
+                    <Button onClick={handleSwap} className="answerbutton">Get Answer</Button>
               </Col>
               </Row>
           </Modal.Body>
