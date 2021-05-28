@@ -21,10 +21,6 @@ const HardRiddle = () => {
         handleShow();
     }
 
-    function countOnLoad(ridd){
-       return 30
-    }
-
     function handleSwap(){
         console.log("Swapped");
     }
