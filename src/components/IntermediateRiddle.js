@@ -18,8 +18,9 @@ const Intermediate = () => {
 
 
     function countdown(){
-        handleShow();
-    }
+        handleShow()
+        setRiddlecount(riddleCount)
+}
 
 
     function handleSwap(){

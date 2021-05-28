@@ -18,8 +18,9 @@ const HardRiddle = () => {
 
 
     function countdown(){
-        handleShow();
-    }
+        handleShow()
+        setRiddlecount(riddleCount)
+}
 
     function handleSwap(){
         console.log("Swapped");

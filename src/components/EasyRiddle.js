@@ -18,7 +18,8 @@ const EasyRiddle = () => {
 
 
     function countdown(){
-        handleShow();
+            handleShow()
+            setRiddlecount(riddleCount)
     }
 
 
