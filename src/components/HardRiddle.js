@@ -6,13 +6,23 @@ const HardRiddle = () => {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [riddlecount, setRiddlecount] = useState(30)
+    const [riddlecount, setRiddlecount] = useState({
+        riddleOnload: 30,
+        riddleFunc: "hhhhhh"
+    });
 
 
 
     function countdown(){
-        
+        handleShow();
+    }
 
+    function countOnLoad(ridd){
+       return 30
+    }
+
+    function handleSwap(){
+        console.log("Swapped");
     }
   
     return (
@@ -32,12 +42,22 @@ const HardRiddle = () => {
           </Modal.Header>
           <Modal.Body>
           <Container>
-            <Row>
-                <Col xs={6} sm={6} md={6} className="riddle-countdown">:{riddlecount}</Col>
-            </Row>
+          <Row>
+            <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle"></Col>
+            <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle">{riddlecount.riddleOnload ? `: ${countOnLoad()} seconds left` : `: ${riddlecount.riddleOnload}`}</Col>
+         </Row>
           </Container>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
+          <Row>
+                <Col xs={12} sm={12} md={12}>
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                </Col>
+              </Row>
+              <Row>
+              <Col xs={12} sm={12} md={12} className="answerbuttoon">
+                    <Button className="answerbutton">Get Answer</Button>
+              </Col>
+              </Row>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
