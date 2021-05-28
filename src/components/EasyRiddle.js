@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button,Container, Modal, Row, Col} from 'react-bootstrap';
 
 const EasyRiddle = () => {
@@ -6,10 +6,14 @@ const EasyRiddle = () => {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [riddlecount, setRiddlecount] = useState({
-        riddleOnload: 30,
-        riddleFunc: "hhhhhh"
-    });
+
+
+    const [riddleCount, setRiddlecount] = useState(30);
+
+    useEffect(() => {
+      const timer = riddleCount > 0 && setInterval(() => setRiddlecount(riddleCount - 1), 1000);
+      return () => clearInterval(timer);
+    }, [riddleCount]);
 
 
 
@@ -17,9 +21,6 @@ const EasyRiddle = () => {
         handleShow();
     }
 
-    function countOnLoad(ridd){
-       return 30
-    }
 
     function handleSwap(){
         console.log("Swapped");
@@ -46,7 +47,10 @@ const EasyRiddle = () => {
               <Container>
                     <Row>
                         <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle"></Col>
-                        <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle">{riddlecount.riddleOnload ? `: ${countOnLoad()} seconds left` : `: ${riddlecount.riddleOnload}`}</Col>
+                        <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle">
+                        {riddleCount === 0 ? 'Time is up' : undefined}
+                        <div>:{riddleCount} seconds remaining</div>
+                        </Col>
                     </Row>
               </Container>
               <Row>
@@ -57,7 +61,7 @@ const EasyRiddle = () => {
               </Row>
               <Row>
               <Col xs={12} sm={12} md={12} className="answerbuttoon">
-                    <Button onClick={handleSwap} className="answerbutton">Get Answer</Button>
+                    <Button onClick={handleSwap} className="answerbutton">Check Answer</Button>
               </Col>
               </Row>
             

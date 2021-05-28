@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Row, Col, Container, Button, Modal} from 'react-bootstrap';
 
 const Intermediate = () => {
@@ -6,10 +6,14 @@ const Intermediate = () => {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [riddlecount, setRiddlecount] = useState({
-        riddleOnload: 30,
-        riddleFunc: "hhhhhh"
-    });
+
+    const [riddleCount, setRiddlecount] = useState(30);
+
+    useEffect(() => {
+      const timer =
+      riddleCount > 0 && setInterval(() => setRiddlecount(riddleCount - 1), 1000);
+      return () => clearInterval(timer);
+    }, [riddleCount]);
 
 
 
@@ -17,9 +21,6 @@ const Intermediate = () => {
         handleShow();
     }
 
-    function countOnLoad(ridd){
-       return 30
-    }
 
     function handleSwap(){
         console.log("Swapped");
@@ -45,7 +46,10 @@ const Intermediate = () => {
           <Container>
           <Row>
             <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle"></Col>
-            <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle">{riddlecount.riddleOnload ? `: ${countOnLoad()} seconds left` : `: ${riddlecount.riddleOnload}`}</Col>
+            <Col xs={6} sm={6} md={6} className="riddle-countdown" id="countriddle">
+                {riddleCount === 0 ? 'Time is up' : undefined}
+                <div>:{riddleCount} seconds remaining</div>
+            </Col>
          </Row>
           </Container>
           <Row>
