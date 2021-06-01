@@ -53,8 +53,7 @@ const HardRiddle = () => {
           </Container>
           <Row>
                 <Col xs={12} sm={12} md={12}>
-                    I will not close if you click outside me. Don't even try to press
-                    escape key.
+                This feature is currently being built. The idea is to display random riddle for you to guess in 30 seconds or less. 
                 </Col>
               </Row>
               <Row>
